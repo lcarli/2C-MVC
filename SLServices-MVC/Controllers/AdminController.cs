@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TwoCanadaExperience.Models;
+using TwoCanadaXP.Models;
 using System.Diagnostics;
 
-namespace TwoCanadaExperience.Controllers
+namespace TwoCanadaXP.Controllers
 {
     public class AdminController : Controller
     {

@@ -1,4 +1,4 @@
-namespace TwoCanadaExperience.Models
+namespace TwoCanadaXP.Models
 {
     public class ErrorViewModel
     {

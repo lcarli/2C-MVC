@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TwoCanadaExperience.Data;
+using TwoCanadaXP.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
