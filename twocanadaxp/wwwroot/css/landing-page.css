@@ -1,0 +1,296 @@
+/* Two Canada Experience Landing Page Styling */
+
+/* Header/Navigation styling for landing page */
+#header {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--tc-gold-primary, #df9f20);
+  box-shadow: 0 4px 20px rgba(223, 159, 32, 0.2);
+}
+
+#header.header-scrolled {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(44, 44, 44, 0.98) 100%);
+  box-shadow: 0 4px 25px rgba(223, 159, 32, 0.3);
+}
+
+/* Logo styling for better contrast */
+#logo img {
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(2px 2px 12px rgba(223, 159, 32, 0.6));
+}
+
+/* Navigation menu styling */
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  background: linear-gradient(135deg, #df9f20, #ffde55) !important;
+  color: #1a1a1a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(223, 159, 32, 0.4);
+}
+
+/* Dropdown menu styling */
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%);
+  backdrop-filter: blur(15px);
+  border: 2px solid #df9f20;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(223, 159, 32, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 12px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #ffffff !important;
+  border-radius: 10px;
+  margin: 2px 10px;
+}
+
+.navbar .dropdown ul a:hover {
+  background: linear-gradient(135deg, #df9f20, #ffde55) !important;
+  color: #1a1a1a !important;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+/* Mobile navigation */
+.mobile-nav-toggle {
+  color: #df9f20 !important;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #ffde55 !important;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(44, 44, 44, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background: rgba(26, 26, 26, 0.1);
+  border: 2px solid #df9f20;
+  border-radius: 20px;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a, .navbar-mobile a:focus {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #ffffff !important;
+  border-radius: 15px;
+  margin: 5px 10px;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  background: linear-gradient(135deg, #df9f20, #ffde55) !important;
+  color: #1a1a1a !important;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: rgba(223, 159, 32, 0.1);
+  border: 1px solid #df9f20;
+  border-radius: 10px;
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: auto;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin: 2px 5px;
+}
+
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/* Hero section and content styling */
+#hero {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(44, 44, 44, 0.8) 100%),
+              url('../imgs/bg-ville.png') center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#hero h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#hero h2 {
+  color: #ffde55;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #df9f20, #ffde55);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(223, 159, 32, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #b8831a, #df9f20);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(223, 159, 32, 0.5);
+  color: #ffffff;
+}
+
+/* Section styling */
+section {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+.section-bg {
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+/* Footer styling */
+#footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  color: #ffffff;
+  border-top: 3px solid #df9f20;
+}
+
+#footer a {
+  color: #df9f20;
+  transition: all 0.3s ease;
+}
+
+#footer a:hover {
+  color: #ffde55;
+  text-shadow: 0 0 8px rgba(255, 222, 85, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #logo img {
+    height: 35px !important;
+  }
+  
+  .navbar a, .navbar a:focus {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
