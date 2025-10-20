@@ -1,0 +1,150 @@
+﻿@{
+	Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Two Canada Experience</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="~/uc/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet"
+	type="text/css"
+	href="~/uc/vendor/bootstrap/css/bootstrap.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet"
+		  type="text/css"
+	href="~/uc/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/uc/vendor/animate/animate.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet"
+		  type="text/css"
+	href="~/uc/vendor/select2/select2.min.css" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/uc/css/util.css" />
+	<link rel="stylesheet" type="text/css" href="~/uc/css/main.css" />
+	<!--===============================================================================================-->
+	<script type="text/javascript">
+		function sendMail() {
+			var yourMessage = "Bonjour! J'aimeiras vous contacter par rapport à...";
+			var subject = "Contact à partir du site web";
+			document.location.href = "mailto:contact@twocanada.ca?subject="
+				+ encodeURIComponent(subject)
+		}
+
+	</script>
+</head>
+<body>
+	<div class="size1 bg0 where1-parent">
+		<!-- Coutdown -->
+		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2"
+			 style="background-image: url('../uc/images/bg2.png')">
+			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+				<div class="flex-col-c-m size6 bor3 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 days">35</span>
+					<span class="s2-txt4">Jours</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor3 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 hours">17</span>
+					<span class="s2-txt4">Heures</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor3 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 minutes">50</span>
+					<span class="s2-txt4">Minutes</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor3 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 seconds">39</span>
+					<span class="s2-txt4">Secondes</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Form -->
+		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+			<div class="wrap-pic1">
+				<img src="~/uc/images/icons/logo21.png" alt="LOGO" />
+			</div>
+
+			<div class="p-t-50 p-b-60">
+				<p class="m1-txt1 p-b-36">
+					On y arrive!<br>
+					<span class="m1-txt2">Nous travaillons fort</span> pour vous offrir
+					la meilleure expérience! Inscrivez-vous dès maintenant!
+				</p>
+				<div class="w-full">
+					<button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04"
+							style="background-color: #7f248d"
+							onclick="sendMail(); return false">
+						Contacter
+					</button>
+				</div>
+
+				<p class="s2-txt3 p-t-18">
+					Notre site est en construction, mais nous sommes prêts à vous
+					rencontrer! Vous voulez en savoir plus? Contactez l’un de nos canaux
+					de service et nous vous répondrons dès que possible!
+				</p>
+			</div>
+
+			<div class="flex-w">
+				<a href="https://www.instagram.com/twocanada/"
+				   class="wrap-pic1"
+				   style="width: 20%"
+				   target="_blank">
+					<img src="~/uc/images/icons/1.png" alt="Instagram" />
+				</a>
+				<a href="https://wa.me/1234567890"
+				   class="wrap-pic1"
+				   style="width: 20%"
+				   target="_blank">
+					<img src="~/uc/images/icons/2.png" alt="Whatsapp" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!--===============================================================================================-->
+	<script src="~/uc/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/uc/vendor/bootstrap/js/popper.js"></script>
+	<script src="~/uc/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/uc/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/uc/vendor/countdowntime/moment.min.js"></script>
+	<script src="~/uc/vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="~/uc/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="~/uc/vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		$(".cd100").countdown100({
+			/*Set Endtime here*/
+			/*Endtime must be > current time*/
+			endtimeYear: 2023,
+			endtimeMonth: 03,
+			endtimeDate: 1,
+			endtimeHours: 12,
+			endtimeMinutes: 0,
+			endtimeSeconds: 0,
+			timeZone: "America/New_York",
+			// ex:  timeZone: "America/New_York"
+			//go to " http://momentjs.com/timezone/ " to get timezone
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="~/uc/vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$(".js-tilt").tilt({
+			scale: 1.1,
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="~/uc/js/main.js"></script>
+</body>
+</html>
